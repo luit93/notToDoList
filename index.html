@@ -7,14 +7,15 @@
     <title>not to do</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <div class="wrapper">
       <h1>Not To Do Task List</h1>
       <div class="main">
         <div class="form1">
-          <form action="">
-            <input type="text" placeholder="Task name" />
-            <input type="number" placeholder="5" />
+          <form action="javascript: void(0) " onsubmit="handleOnSubmit(this)">
+            <input name="task" type="text" placeholder="Task name" required />
+            <input name="hr" type="number" placeholder="5" required />
             <input type="submit" value="Add" />
           </form>
         </div>
@@ -22,111 +23,20 @@
         <section class="task-section">
           <div class="to-do">
             <h3>Task List</h3>
-            <ul>
-              <li>
-                <div class="items">
-                  <span class="item">
-                    <input type="checkbox" />
-                    <label for="">Watching TV</label>
-                  </span>
-                  <span class="hrs">4hr</span>
-                </div>
-              </li>
-              <li>
-                <div class="items">
-                  <span class="item">
-                    <input type="checkbox" />
-                    <label for="">Watching TV</label>
-                  </span>
-                  <span class="hrs">4hr</span>
-                </div>
-              </li>
-              <li>
-                <div class="items">
-                  <span class="item">
-                    <input type="checkbox" />
-                    <label for="">Watching TV</label>
-                  </span>
-                  <span class="hrs">4hr</span>
-                </div>
-              </li>
-              <li>
-                <div class="items">
-                  <span class="item">
-                    <input type="checkbox" />
-                    <label for="">Watching TV</label>
-                  </span>
-                  <span class="hrs">4hr</span>
-                </div>
-              </li>
-              <li>
-                <div class="items">
-                  <span class="item">
-                    <input type="checkbox" />
-                    <label for="">Watching TV</label>
-                  </span>
-                  <span class="hrs">4hr</span>
-                </div>
-              </li>
-            </ul>
+            <ul id="task-list"></ul>
             <hr />
-            Total hours allocated = 100 hr/w
+            Total hours allocated = <span id="totalHrs"></span>hr/wk of 168hr/wk
           </div>
           <hr />
           <div class="not-to-do">
             <h3>Task List</h3>
-            <ul>
-              <li>
-                <div class="items">
-                  <span class="item">
-                    <input type="checkbox" />
-                    <label for="">Watching TV</label>
-                  </span>
-                  <span class="hrs">4hr</span>
-                </div>
-              </li>
-              <li>
-                <div class="items">
-                  <span class="item">
-                    <input type="checkbox" />
-                    <label for="">Watching TV</label>
-                  </span>
-                  <span class="hrs">4hr</span>
-                </div>
-              </li>
-              <li>
-                <div class="items">
-                  <span class="item">
-                    <input type="checkbox" />
-                    <label for="">Watching TV</label>
-                  </span>
-                  <span class="hrs">4hr</span>
-                </div>
-              </li>
-              <li>
-                <div class="items">
-                  <span class="item">
-                    <input type="checkbox" />
-                    <label for="">Watching TV</label>
-                  </span>
-                  <span class="hrs">4hr</span>
-                </div>
-              </li>
-              <li>
-                <div class="items">
-                  <span class="item">
-                    <input type="checkbox" />
-                    <label for="">Watching TV</label>
-                  </span>
-                  <span class="hrs">4hr</span>
-                </div>
-              </li>
-            </ul>
+            <ul id="bad-list"></ul>
             <hr />
-            Total hours allocated = 100 hr/w
+            Total hours allocated = <span id="badTotalHrs"></span>hr/w
           </div>
         </section>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
